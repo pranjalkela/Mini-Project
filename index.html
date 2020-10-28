@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Online Meal</title>
-</head>
-<style>
-.nav{
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="food-and-beverage-food.png" type="image/gif" sizes="16x16"> 
+    <style>
+        .nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -103,7 +103,7 @@
   animation-duration: 1.5s;
 }
 .mySlides img{
-    opacity: .6;
+    opacity: .7;
 }
 .text{
     font-size: large;
@@ -151,10 +151,21 @@ margin: 10px;
     opacity: none;
     width: 300px;
 }
-</style>
+.h-primary-center{
+    text-align: left;
+    margin-left: 42px;
+
+    font-size: 45px;
+    font-weight: bold;
+}
+    </style>
+    <title>Online Meal</title>
+</head>
 <body>
     <nav class="nav">
-        
+        <div class="logo">
+            <img src="food-and-beverage-food.png" alt="">
+        </div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -216,18 +227,22 @@ margin: 10px;
             <div class="services">
                 <div class="box">
                     <img src="breakfast.jpg" alt="ffff">
+                    <h2 class="h-secondary center">Breakfast</h2>
                     <p></p>
                 </div>
                 <div class="box">
                     <img src="lunch.jpg" alt="ffff">
+                    <h2 class="h-secondary center">Lunch</h2>
                     <p></p>
                 </div>
                 <div class="box">
                     <img src="snack.jpg" alt="ffff">
+                    <h2 class="h-secondary center">Snacks</h2>
                     <p></p>
                 </div>
                 <div class="box">
                     <img src="dinnder.jpg" alt="ffff">
+                    <h2 class="h-secondary center">Dinner</h2>
                     <p></p>
                 </div>
             </div>
