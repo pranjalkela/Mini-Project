@@ -6,53 +6,107 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="food-and-beverage-food.png" type="image/gif" sizes="16x16"> 
     <style>
-        .nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #0c0a31;
+* {
+  box-sizing: border-box;
 }
-.logo{
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-}
-.logo{
-    margin: 7px 15px;
-}
-.logo img{
-    height: 50px;
-    margin: 8px 9px;
-}
-.nav-links{
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
-}
-.nav-links li{
-    list-style: none;
-}
-.nav-links a{
-    color: white;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
 
+body {
+  margin: 0;
 }
-.burger{
-    display: none;
-    cursor: pointer;
+.navbar {
+  overflow: auto;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.burger div{
-    width: 25px;
-    height: 5px;
-    background-color: white;
-    margin: 5px;
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  width: 20%;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  height: auto;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  height: auto;
+}
+
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.dropdown-content-column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  background-color: rgb(241, 193, 193);
+  height: 300px;
+}
+
+.dropdown-content-column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content-column a:hover {
+  background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
 }
 .mySlides {display: none;}
 .img {vertical-align: middle;}
@@ -60,7 +114,6 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
-  position: relative;
   text-align: center;
   color: rgb(0, 0, 0);
 }
@@ -103,7 +156,7 @@
   animation-duration: 1.5s;
 }
 .mySlides img{
-    opacity: .7;
+    opacity: .6;
 }
 .text{
     font-size: large;
@@ -127,127 +180,122 @@
     font-family: 'Pacifico', cursive;
     font-weight: bold;
 }
-.h-primary{
-    font-size: 3.8rem ;
-    padding: 12px;        
-}
-.h-secondary{
-    font-size: 2.8rem ;
-    padding: 12px;        
-}
-.services{
-    margin: 34px;
-    display: flex;
-}
-.services .box {
-border: 2px solid brown;
-height: 300px;
-margin: 10px;
-
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
 }
 
-.services .box img {
-    height: 300px;
-    opacity: none;
-    width: 300px;
+.tablink:hover {
+  background-color: #777;
 }
-.h-primary-center{
-    text-align: left;
-    margin-left: 42px;
 
-    font-size: 45px;
-    font-weight: bold;
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
 }
-    </style>
-    <title>Online Meal</title>
+
+#Breakfast {background-color:red;}
+#Lunch {background-color:green;}
+#Snacks {background-color:blue;}
+#Dinner {background-color:orange;}
+</style>
 </head>
 <body>
-    <nav class="nav">
-        <div class="logo">
-            <img src="food-and-beverage-food.png" alt="">
+    <div class="navbar">
+  <a href="#login"><i class="fa fa-fw fa-user"></i>Login</a>
+  <a href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Services 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Mega Menu</h2>
+      </div>   
+      <div class="row">
+        <div class="dropdown-content-column">
+          <h3><a href="#">Breakfast</a></h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div class="dropdown-content-column">
+          <h3><a href="#">Lunch</a></h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
-    </nav>
-
-    <div class="slideshow-container">
-
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
-          <img class="img" src="img1.jpg" style="width:100%">
-          <div class="text">Breakfast</div>
+        <div class="dropdown-content-column">
+          <h3><a href="#">Snacks</a></h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
-          <img class="img" src="img2.jpg" style="width:100%">
-          <div class="text">Lunch</div>
+        <div class="dropdown-content-column">
+          <h3><a href="#">Dinner</a></h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img class="img" src="kabir-cheema-oUIPGCBx2OI-unsplash.jpg" style="width:100%">
-          <div class="text">Snacks</div>
-        </div>
-        
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img class="img" src="dinner.jpg" style="width:100%">
-            <div class="text">Dinner</div>
-        </div>
-
-        <div class="slideshow-container-text">
-            <h1>Welcome, to online meal</h1>
-            <p>Delicious Meal is here.</p>
-        </div>  
-
+      </div>
     </div>
-        <br>
-        
-        <div style="text-align:center">
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span>
-          <span class="dot"></span> 
-        </div>
+  </div>
+  <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+  <a href="#login"><i class="fa fa-fw fa-user"></i>Login</a>
+  
+</div>
 
-        <section class="services-container">
-            <h1 class="h-primary-center">
-                Our Services
-            </h1>
-            <div class="services">
-                <div class="box">
-                    <img src="breakfast.jpg" alt="ffff">
-                    <h2 class="h-secondary center">Breakfast</h2>
-                    <p></p>
-                </div>
-                <div class="box">
-                    <img src="lunch.jpg" alt="ffff">
-                    <h2 class="h-secondary center">Lunch</h2>
-                    <p></p>
-                </div>
-                <div class="box">
-                    <img src="snack.jpg" alt="ffff">
-                    <h2 class="h-secondary center">Snacks</h2>
-                    <p></p>
-                </div>
-                <div class="box">
-                    <img src="dinnder.jpg" alt="ffff">
-                    <h2 class="h-secondary center">Dinner</h2>
-                    <p></p>
-                </div>
-            </div>
-        </section>
-        
+ <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img class="img" src="/img/img1.jpg" style="width:100%">
+      <div class="text">Breakfast</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img class="img" src="/img/img2.jpg" style="width:100%">
+      <div class="text">Lunch</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img class="img" src="/img/kabir-cheema-oUIPGCBx2OI-unsplash.jpg" style="width:100%">
+      <div class="text">Snacks</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img class="img" src="/img/dinner.jpg" style="width:100%">
+        <div class="text">Dinner</div>
+    </div>
+
+    <div class="slideshow-container-text">
+        <h1>Welcome, to online meal</h1>
+        <p>Delicious Meal is here.</p>
+    </div>  
+
+</div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span> 
+    </div>
 
     <script>
         var slideIndex = 0;
