@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formcss.css">
     <style>
 * {
   box-sizing: border-box;
@@ -203,6 +204,9 @@ body {
   padding: 50px;
   text-align: center;
 }
+.login{
+    margin: 10px 50px 5px 100px;
+}
 
 #Breakfast {background-color:red;}
 #Lunch {background-color:green;}
@@ -252,7 +256,36 @@ body {
     </div>
   </div>
   <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
-  <a href="#login"><i class="fa fa-fw fa-user"></i>Login</a>
+        <div class="login">
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="Login-form">Login</button>
+
+    <div id="id01" class="modal">
+    
+      <form class="modal-content animate" action="" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+    
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+        
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw"><a href="#" style="color: #000;">Forgot password?</a></span>
+        </div>
+      </form>
+    </div>
+    </div>
   
 </div>
 
