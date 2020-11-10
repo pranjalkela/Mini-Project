@@ -182,37 +182,53 @@ body {
     font-weight: bold;
 }
 .tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
+      background-color: #555;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 25%;
+      /* height: 250px; */
+    }
 
-.tablink:hover {
-  background-color: #777;
-}
+    .tablink:hover {
+      background-color: #777;
+    }
 
-/* Style the tab content */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 50px;
-  text-align: center;
-}
-.login{
-    margin: 10px 50px 5px 100px;
-}
+    /* Style the tab content */
+    .tabcontent {
+      color: white;
+      display: none;
+      /* padding: 50px; */
+      text-align: center;
+    }
 
-#Breakfast {background-color:red;}
-#Lunch {background-color:green;}
-#Snacks {background-color:blue;}
-#Dinner {background-color:orange;}
-</style>
+    .login {
+      margin: 10px 50px 5px 100px;
+    }
+
+    #Breakfast {
+      background-color:gray;
+      height: 250px;
+    }
+
+    #Lunch {
+      height: 250px;
+      background-color: gray;
+    }
+
+    #Snacks {
+      height: 250px;
+      background-color: gray;
+    }
+
+    #Dinner {
+      height: 250px;
+      background-color: gray;
+    }
 </head>
 <body>
     <div class="navbar">
@@ -352,6 +368,59 @@ body {
         }
     </script>
 
+    <br> 
+  <div id="Breakfast" class="tabcontent">
+    <a href="#"><img src="img/break.jpg" style=" width: 23%; height: 250px; padding-top: 5px; padding-right: 0px;"></a>
+    <a href="#"><img src="img/break.1jpg.jpg" style=" width: 25%; height: 250px; padding-top: 5px; padding-right: 0px;"></a>
+    <a href="#"><img src="img/break2.jpg" style=" width: 25%; height: 250px; padding-top: 5px;padding-right: 0px;" ></a>
+    <a href="#"><img src="img/break3.jpg" style=" width: 25%; height: 250px; padding-top: 5px;padding-right: 0px;" ></a>
+    
+  </div>
+
+  <div id="Lunch" class="tabcontent" >
+    <a href=""><img src="img/lun.jpg" style=" width: 23%; height: 250px; padding-top: 5px; padding-right: 0px;"  ></a>
+    <a href=""><img src="img/lun2jpg.jpg" style=" width: 25%; height: 250px; padding-top: 5px; padding-right: 0px;"></a>
+    <a href=""><img src="img/lun3.jpg" style=" width: 25%; height: 250px; padding-top: 5px;padding-right: 0px;"  ></a>
+    <a href=""><img src="img/lun4.jpg" style=" width: 25%; height: 250px; padding-top: 5px;padding-right: 0px;"  ></a>
+  </div>
+
+  <div id="Snacks" class="tabcontent">
+    <a href=""><img src="img/sna1jpg.jpg" style=" width: 23%; height: 250px; padding-top: 5px; padding-right: 0px;"  ></a>
+    <a href=""><img src="img/sna2.jpg" style=" width: 25%; height: 250px; padding-top: 5px; padding-right: 0px;"></a>
+    <a href=""><img src="img/sna3.jpg" style=" width: 25%; height: 250px; padding-top: 5px;padding-right: 0px;"  ></a>
+    <a href=""><img src="img/sna4.jpg" style=" width: 25%; height: 250px; padding-top: 5px;padding-right: 0px;"  ></a>
+  </div>
+
+  <div id="Dinner" class="tabcontent">
+    <a href=""><img src="img/din1.jpg" style=" width: 23%; height: 250px; padding-top: 5px; padding-right: 0px;"  ></a>
+    <a href=""> <img src="img/din2.jpg" style=" width: 25%; height: 250px; padding-top: 5px; padding-right: 0px;"></a>
+    <a href=""><img src="img/din3.jpg" style=" width: 25%; height: 250px; padding-top: 5px;padding-right: 0px;"  ></a>
+    <a href=""><img src="img/din4.jpg" style=" width: 25%; height: 250px; padding-top: 5px;padding-right: 0px;"  ></a>
+  </div>
+
+  <button class="tablink" onclick="openMenu('Breakfast', this, 'red')" id="defaultOpen">Breakfast</button>
+  <button class="tablink" onclick="openMenu('Lunch', this, 'green')">Lunch</button>
+  <button class="tablink" onclick="openMenu('Snacks', this, 'blue')">Snacks</button>
+  <button class="tablink" onclick="openMenu('Dinner', this, 'orange')">Dinner</button>
+
+  <script>
+    function openMenu(cityName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(cityName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
 
 </body>
 </html>
