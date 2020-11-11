@@ -214,6 +214,7 @@ li, a, button, .slide-show-absolute-text{
 }
 .feedback .form form .form-input-text:hover, .feedback .form form .form-textarea:hover{
     background-color: white;
+    box-shadow: 2px 1px 10px rgb(158, 158, 158);
     color: black;
 }
 
