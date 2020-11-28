@@ -19,48 +19,48 @@
 
         echo '
         <div class="main-content">
-        <div class="breakfast-heading"><br>
-            <label for="">Breakfast</label>
+        <div class="breakfast-heading">
+            <label for="">Snacks</label>
         </div>
 
         <div class="myslider">
             <div class="myslide">
                 <div class="img">
-                    <a href="#"><img src="../../img/Breakfast/amlet.jpg" width="400px" height="250px"
+                    <a href="#"><img src="../../img/dinner/din1.jpg" width="400px" height="250px"
                             alt="Image Not Found"></a>
-                    <label for="">Omellete</label>
+                    <label for="">Biryani</label>
                 </div>
                 <div class="img">
-                    <a href="#"><img src="../../img/Breakfast/Chhole-Bhature.jpg" width="150px" height="250px"
+                    <a href="#"><img src="../../img/dinner/din2.jpg" width="150px" height="250px"
                             alt="Image Not Found"></a>
-                    <label for="">Chhole Bhature</label>
+                    <label for="">Rajma Chawal</label>
                 </div>
                 <div class="img">
-                    <a href="#"><img src="../../img/Breakfast/bread-and-butter.jpg" width="400px" height="250px"
+                    <a href="#"><img src="../../img/dinner/din3.jpg" width="400px" height="250px"
                             alt="Image Not Found"></a>
-                    <label for="">Bread and Butter</label>
+                    <label for="">Egg Cury</label>
                 </div>
             </div>
             <div class="myslide">
                 <div class="img">
-                    <a href="#"><img src="../../img/Breakfast/chai pharatha.jpg" width="400px"
-                            height="250px" alt="Image Not Found"></a>
-                    <label for="">Chai Paratha</label>
+                    <a href="#"><img src="../../img/dinner/din4.jpg" width="400px" height="250px"
+                            alt="Image Not Found"></a>
+                    <label for="">Chole Nan</label>
                 </div>
                 <div class="img">
-                    <a href="#"><img src="../../img/Breakfast/poha.JPG" width="400px" height="250px"
+                    <a href="#"><img src="../../img/dinner/din5.jpg" width="400px" height="250px"
                             alt="Image Not Found"></a>
-                    <label for="">Poha</label>
+                    <label for="">Indian Thali</label>
                 </div>
                 <div class="img">
-                    <a href="#"><img src="../../img/Breakfast/Aloo_Paratha.jpg" width="400px" height="250px"
+                    <a href="#"><img src="../../img/dinner/din6.jpg" width="400px" height="250px"
                             alt="Image Not Found"></a>
-                    <label for="">Aloo Paratha</label>
+                    <label for="">Turkey</label>
                 </div>
             </div>
         </div>
     </div>
-            ';
+        ';
 
         include 'footer.php';
     ?>

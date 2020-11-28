@@ -136,6 +136,9 @@ li, a, button, .slide-show-absolute-text{
         display: flex;
         justify-content: center;
     }
+    ._containt{
+        display: block;
+    }
     .main-content{
         width: 100%;
     }
@@ -290,3 +293,74 @@ li, a, button, .slide-show-absolute-text{
     
 }
 /* FOOTER END */
+
+/* MEDIA QUERY START */
+
+@media only screen and (max-width: 800px){
+    body {
+        background-color: rgb(0, 0, 0);
+      }
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-logo{
+        margin: 0px 0px 10px 0px;
+    }
+    .cta button{
+        margin-top: 20px;
+    }
+    .about .heading{
+      text-align: center;
+      padding: 10px 0px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .about .about-content .chef img{
+        display: none;
+    }
+}
+@media only screen and (max-width: 475px){
+    .myslide{
+        width: 100%;
+        margin: auto;
+    }
+    .nav-links li{
+        padding: 0px 5px;
+    }
+    .nav-links li a{
+        padding: 0px 1px;
+    }
+    .signin-signup .main .form-heading span{
+        font-size: 45px;
+    }
+    .signin-signup .main form{
+        width: auto;
+    }
+    .main-content .myslider .myslide{
+        flex-direction: column;
+    }
+    .main-content .myslider .myslide .img{
+        margin: 10px 30px;
+    }
+    .feedback .heading label{
+        font-size: medium;
+    }
+    .feedback .form form .form-input-text, .feedback .form form .form-textarea{
+        padding: 1px 1px 1px 8px;
+        font-size: small;
+    }
+    .feedback .form form .form-textarea{
+        border-radius: 8px 8px 0px 8px;
+    }
+    .feedback .form form .form-submit{
+        font-size: small;
+    }
+    .home-selector{
+        height: 150px;
+    }
+    .home-selector .contactus, .home-selector .scroll-up{
+        margin-top: 50px;
+    }
+}
