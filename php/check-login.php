@@ -91,6 +91,12 @@
                     // }
                 }
             }
+            session_start();
+            $_SESSION['fname'] = $display_name;
+            $_SESSION['lname'] = $display_surname;
+            $_SESSION['email'] = $email;
+            $_SESSION['password'] = $password;
+
             if($checkemailis > 0 && $checkpasswordis > 0)
             {
                 echo '
@@ -100,7 +106,7 @@
                             src="../img/logo/logowithtext.png" alt="logo" width="180px"><label class="nav-logo-text"></label></div>
                     <nav>
                         <ul class="nav-links">
-                            <li><a href="Home">Home</a></li>
+                            <li><a href="#">Home</a></li>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#feedback">Feedback</a></li>
@@ -175,10 +181,6 @@
                                 <img class="img" src="../img/slideshow/dinner.jpg" style="width:100%">
                                 <div class="text">Dinner</div>
                             </div>
-                            <!-- <div class="slide-show-absolute-text">
-                            <h1>Welcome, to online meal</h1>
-                            <p>Delicious Meal is here.</p>
-                        </div> -->
                         </div>
                     </div>
                     <br>
@@ -203,7 +205,7 @@
                                 </a>
                             </div>
                             <div class="card">
-                                <a href="pages/lunch.html"><img src="../img/card/lunch-card.jpg" alt="Image Not Found">
+                                <a href="pages/lunch.php"><img src="../img/card/lunch-card.jpg" alt="Image Not Found">
                                     <h2 class="card-text">Lunch</h2>
                                 </a>
                             </div>

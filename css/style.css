@@ -359,6 +359,9 @@ li, a, button, .slide-show-absolute-text{
       .cta button{
           margin-top: 20px;
       }
+      .form-cta{
+        margin-top: 20px;
+    }
 }
 @media only screen and (max-width: 700px) {
     
